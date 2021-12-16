@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Button, Input } from 'semantic-ui-react';
 import GitHubAPI from '../modules/GitHubAPI';
+import { useDispatch } from 'react-redux';
 
 const GHSearch = () => {
   const [userSearch, setUserSearch] = useState();
+  const dispatch = useDispatch();
 
   const handleChange = (event) => {
     setUserSearch(event.target.value);
@@ -11,6 +13,7 @@ const GHSearch = () => {
 
   const searchUsers = async () => {
     const results = await GitHubAPI.searchUsers(userSearch);
+    dispatch({ type: 'SET_SEARCH_RESULTS', payload: results });
   }
 
   return (
