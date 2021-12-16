@@ -21,7 +21,6 @@ describe('Visiting the application, a user can type a keyword in the search inpu
       cy.get('[data-cy=gh-search-item-1]').within(() => {
         cy.get('.image').should('be.visible');
         cy.get('.header').should('contain.text', 'Barack');
-        // cy.get('href').should('contain.text', 'https://github.com/Barack');
       });
     });
   });
