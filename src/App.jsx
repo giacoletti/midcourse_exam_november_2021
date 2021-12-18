@@ -19,12 +19,8 @@ const App = () => {
 
   return (
     <Container>
-      <section name="title">
-        <Header />
-      </section>
-      <section name="main">
-        <GHSearch />
-      </section>
+      <Header />
+      <GHSearch />
       <Grid data-cy="gh-search-list">
         {searchResultsList.length === 0 && errorMessage ?
           <Message data-cy="warning-message" warning compact header={errorMessage} /> :
