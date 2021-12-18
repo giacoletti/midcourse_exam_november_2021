@@ -4,7 +4,12 @@ const rootReducer = (state, action) => {
       return {
         ...state,
         searchResults: action.payload
-      }
+      };
+    case 'SET_ERROR_MESSAGE':
+      return {
+        ...state,
+        errorMessage: action.payload
+      };
     default:
       return state;
   }

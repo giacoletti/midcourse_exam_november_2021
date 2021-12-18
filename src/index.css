@@ -6,7 +6,15 @@
   padding-bottom: 0.5em;
 }
 
+.ui.grid {
+  margin-top: 1em;
+}
+
+.ui.message {
+  margin-left: 1em;
+}
+
 .ui.card {
-  margin-top: 2em !important;
+  margin-top: 1em !important;
   margin-bottom: 2em !important;
 }

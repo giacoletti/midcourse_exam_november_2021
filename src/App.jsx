@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from './components/Title';
 import GHSearch from './components/GHSearch';
-import { Container, Grid } from 'semantic-ui-react';
+import { Container, Grid, Message } from 'semantic-ui-react';
 import { useSelector } from 'react-redux';
 import GHResultsItem from './components/GHResultsItem';
 
 const App = () => {
-  const { searchResults } = useSelector(state => state);
+  const { searchResults, errorMessage } = useSelector((state) => state);
 
   const searchResultsList = searchResults.map((searchItem, index) => {
     searchItem.id = index + 1;
@@ -26,7 +26,10 @@ const App = () => {
         <GHSearch />
       </section>
       <Grid data-cy="gh-search-list">
-        {searchResultsList}
+        {searchResultsList.length === 0 && errorMessage ?
+          <Message data-cy="warning-message" warning compact header={errorMessage} /> :
+          searchResultsList
+        }
       </Grid>
     </Container>
   );
