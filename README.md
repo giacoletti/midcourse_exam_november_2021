@@ -1,3 +1,7 @@
+### Deployment
+
+[GitHub Search](https://github-search-gi.netlify.app/)
+
 ## Midcourse Exam Challenge - GitHub User Search
 
 You are challenged with creating a feature that allows the users to search the GitHub registry of users.
@@ -103,3 +107,7 @@ The search for "Barack" yields the following results:
 The facilitator will inform you how much time you have to complete the task. You are free to use any resources you deem necessary. We will observe your workflow as well as assess the quality of your code and tests.
 
 Good luck!
+
+### Examiner
+
+[Thomas](https://github.com/tochman)
