@@ -1,0 +1,16 @@
+.ui.container {
+  margin-top: 2em;
+}
+
+.ui.grid {
+  margin-top: 1em;
+}
+
+.ui.message {
+  margin-left: 1em;
+}
+
+.ui.card {
+  margin-top: 1em !important;
+  margin-bottom: 2em !important;
+}
