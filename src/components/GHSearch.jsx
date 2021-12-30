@@ -13,9 +13,13 @@ const GHSearch = () => {
 
   const searchUsers = async () => {
     const results = await GitHubAPI.searchUsers(userSearch);
-    dispatch({ type: 'SET_SEARCH_RESULTS', payload: results });
-    if (!results.length) {
-      dispatch({ type: 'SET_ERROR_MESSAGE', payload: 'No results has been found' });
+    if (results.message){
+      dispatch({ type: 'SET_ERROR_MESSAGE', payload: results.message });
+    } else {
+      dispatch({ type: 'SET_SEARCH_RESULTS', payload: results });
+      if (!results.length) {
+        dispatch({ type: 'SET_ERROR_MESSAGE', payload: 'No results has been found' });
+      }
     }
   }
 
